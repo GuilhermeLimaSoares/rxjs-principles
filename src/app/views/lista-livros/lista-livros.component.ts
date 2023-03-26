@@ -4,6 +4,7 @@ import { LivroService } from 'src/app/service/livro.service';
 import { Item, LivrosResultado } from 'src/app/models/interfaces';
 import { LivroVolumeInfo } from 'src/app/models/livroVolumeInfo';
 import { FormControl } from '@angular/forms';
+import { Subscription } from 'rxjs';
 
 const PAUSA = 300;
 
@@ -56,6 +57,10 @@ export class ListaLivrosComponent {
       return new LivroVolumeInfo(item)
     })
   }
+
+ /* ngOnDestroy() {
+    this.subscription.unsubscribe()
+  } *?
 
 }
 
